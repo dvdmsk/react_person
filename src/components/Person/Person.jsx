@@ -7,13 +7,13 @@ export const Person = ({ person }) => {
     ? `${partnerName} is my ${sex === 'm' ? 'wife' : 'husband'}`
     : 'I am not married';
 
-  const partnerElement = <p className="Person__partner">{partner}</p>;
+  const personPartner = <p className="Person__partner">{partner}</p>;
 
   return (
     <section className="Person">
       <h2 className="Person__name">My name is {name}</h2>
       {personAge}
-      {partnerElement}
+      {personPartner}
     </section>
   );
 };
