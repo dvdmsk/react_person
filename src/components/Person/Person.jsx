@@ -5,23 +5,23 @@ export const Person = ({ person }) => {
     <p className="Person__age">I am {person.age}</p>
   ) : null;
 
-  let parthner = 'I am not married';
+  let partner = 'I am not married';
 
   if (person.isMarried) {
     const text = `${person.partnerName} is my `;
 
-    parthner = text;
+    partner = text;
 
-    parthner += person.sex === 'm' ? 'wife' : 'husband';
+    partner += person.sex === 'm' ? 'wife' : 'husband';
   }
 
-  const parthnerElement = <p className="Person__partner">{parthner}</p>;
+  const partnerElement = <p className="Person__partner">{partner}</p>;
 
   return (
     <section className="Person">
       <h2 className="Person__name">My name is {person.name}</h2>
       {ageElement}
-      {parthnerElement}
+      {partnerElement}
     </section>
   );
 };
